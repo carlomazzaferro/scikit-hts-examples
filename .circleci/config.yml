@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - make docker-push
+      - run: make docker-push
 
 
 workflows:
