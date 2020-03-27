@@ -62,7 +62,7 @@ Docker
 Simply:
 
 ```bash
-$ docker run carlomazzaferro/scikit-hts-examples:latest
+$ docker run carlomazzaferro/scikit-hts-examples:0.2.2
 ```
 
 
