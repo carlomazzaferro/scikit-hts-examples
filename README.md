@@ -1,5 +1,3 @@
-# Template:
-
 **CI**
 
 [![carlomazzaferro](https://circleci.com/gh/carlomazzaferro/scikit-hts-examples.svg?style=svg)](https://circleci.com/gh/carlomazzaferro/scikit-hts-examples)
