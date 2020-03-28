@@ -1,3 +1,15 @@
+# Template:
+
+*CI*
+
+[![carlomazzaferro](https://circleci.com/gh/carlomazzaferro/scikit-hts-examples.svg?style=svg)](https://circleci.com/gh/carlomazzaferro/scikit-hts-examples)
+
+*Docker Image*
+
+[![](https://images.microbadger.com/badges/image/carlomazzaferro/scikit-hts-examples:0.2.2.svg)](https://microbadger.com/images/carlomazzaferro/scikit-hts-examples:0.2.2 "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/carlomazzaferro/scikit-hts-examples:0.2.2.svg)](https://microbadger.com/images/carlomazzaferro/scikit-hts-examples:0.2.2 "Get your own version badge on microbadger.com")
+
+
 Scikit-hts examples
 ==============================
 
