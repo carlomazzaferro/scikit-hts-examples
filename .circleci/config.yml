@@ -8,7 +8,6 @@ jobs:
   push-image:
     docker:
       - image: carlomazzaferro/ci:latest
-    working_directory: ~/
     steps:
       - checkout
       - setup_remote_docker
