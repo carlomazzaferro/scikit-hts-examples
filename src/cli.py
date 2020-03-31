@@ -23,10 +23,11 @@ def cli():
 
 
 @cli.command()
-@click.option('--raw', required=True)
-@click.option('--train', required=True)
-def make_dataset(raw, train):
-    create_datasets(raw, train)
+@click.option('--raw', default='data/raw', required=False)
+@click.option('--train', default='data/processed', required=False)
+@click.option('--name', required=True)
+def make_dataset(raw, train, name):
+    create_datasets(raw, train, name)
 
 
 @cli.command()
