@@ -15,7 +15,7 @@ The scaffolding for this project was based on
 [cookiecutter data science](https://drivendata.github.io/cookiecutter-data-science/)
 and it contains code related to [scikit-hts](https://github.com/carlomazzaferro/scikit-hts)
 
-Namely, you'll find usage examples. 
+Namely, you'll find usage examples and some utility code for generating datasets.
 
 Installation
 ------------
