@@ -42,7 +42,10 @@ install-prophet: install
 install-auto-arima: install
 	pip3 install -r requirements-auto-arima.txt
 
-install-all: install install-auto-arima install-geo install-prophet
+install-distributed: install
+	pip3 install -r requirements-distributed.txt
+
+install-all: install install-auto-arima install-geo install-prophet install-distributed
 
 
 clean: ##-local- Cleanup project
@@ -63,3 +66,12 @@ docker-run:
 docker-push:  ##-sandbox- Build & push image to Dockerhub
 docker-push: docker-build
 	docker push carlomazzaferro/scikit-hts-examples:${HTS_VERSION}
+
+
+# -------------------------------------------------------------------
+# DATA
+# -------------------------------------------------------------------
+
+m5-data:  ##-local- make dataset
+m5-data:
+	sh scripts/make_m5.sh
