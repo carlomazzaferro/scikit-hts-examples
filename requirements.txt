@@ -7,3 +7,6 @@ pandas==1.0.1
 yellowbrick==1.1
 click==7.0
 scikit-hts==0.5.0
+plotly==4.6.0
+networkx==2.4
+
