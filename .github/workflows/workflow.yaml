@@ -14,6 +14,20 @@ env:
   DOCKER_PW: ${{ secrets.DOCKER_PW }}
 
 jobs:
+  build:
+    name: Build Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          lfs: true
+          fetch-depth: 1
+
+      - name: Release PyPI
+        run: |
+          make docker-build
+
   publish:
     name: Publish Release
     runs-on: ubuntu-latest
