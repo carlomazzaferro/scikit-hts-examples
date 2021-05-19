@@ -68,7 +68,7 @@ docker-push: docker-build docker-login
 	docker push carlomazzaferro/scikit-hts-examples:${HTS_VERSION}
 
 docker-login:
-	@echo ${DOCKER_PWD} | docker login -u ${DOCKER_LOGIN} --password-stdin
+	@echo ${DOCKER_PW} | docker login -u ${DOCKER_LOGIN} --password-stdin
 
 
 # -------------------------------------------------------------------
