@@ -39,6 +39,6 @@ jobs:
           lfs: true
           fetch-depth: 1
 
-      - name: Release PyPI
+      - name: Push to Registry
         run: |
             make docker-push
