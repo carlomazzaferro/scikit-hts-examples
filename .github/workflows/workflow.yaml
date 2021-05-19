@@ -24,12 +24,12 @@ jobs:
           lfs: true
           fetch-depth: 1
 
-      - name: Release PyPI
+      - name: Docker Build
         run: |
           make docker-build
 
   publish:
-    name: Publish Release
+    name: Docker Push
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
