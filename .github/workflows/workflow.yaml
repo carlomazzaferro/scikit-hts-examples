@@ -1,0 +1,44 @@
+name: main workflow
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+
+env:
+  DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+  DOCKER_PW: ${{ secrets.DOCKER_PW }}
+
+jobs:
+  build:
+    name: Build Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          lfs: true
+          fetch-depth: 1
+
+      - name: Docker Build
+        run: |
+          make docker-build
+
+  publish:
+    name: Docker Push
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          lfs: true
+          fetch-depth: 1
+
+      - name: Release PyPI
+        run: |
+            make docker-push

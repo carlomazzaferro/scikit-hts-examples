@@ -64,8 +64,11 @@ docker-run:
 	docker run -p 8000:8888 -it scikit-hts-examples:${HTS_VERSION} .
 
 docker-push:  ##-sandbox- Build & push image to Dockerhub
-docker-push: docker-build
+docker-push: docker-build docker-login
 	docker push carlomazzaferro/scikit-hts-examples:${HTS_VERSION}
+
+docker-login:
+	@echo ${DOCKER_PWD} | docker login -u ${DOCKER_LOGIN} --password-stdin
 
 
 # -------------------------------------------------------------------
